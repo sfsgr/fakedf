@@ -22,3 +22,4 @@ def main():
     np.savez_compressed(os.path.join("data","processed","test.npz"), image=x_test,label=y_test)
 if __name__ == "__main__":
     main()
+#preprocess.py
