@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+.dvc/cache
+*.h5
+data/
+models/
+.env
