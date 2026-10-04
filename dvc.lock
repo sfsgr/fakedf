@@ -23,8 +23,8 @@ stages:
       nfiles: 2
     - path: src/preprocess.py
       hash: md5
-      md5: d0c5d76130ced3f596f6ee37067b99d2
-      size: 1058
+      md5: 41d348737d94a6fd72aab2d402a1d441
+      size: 1074
     params:
       params.yaml:
         preprocess.seed: 42
@@ -32,20 +32,20 @@ stages:
     outs:
     - path: data/processed
       hash: md5
-      md5: 560496ac78afddcc063869aa64564797.dir
-      size: 50914337
+      md5: 75140469712595c0ff37c90c904c232e.dir
+      size: 51156912
       nfiles: 3
   train:
     cmd: python src/train.py
     deps:
     - path: data/processed/train.npz
       hash: md5
-      md5: a1033c8c9296df0084c9379895d15fd9
-      size: 37074097
+      md5: b6ffcad1b441d4fb6f9b0c268b2e3b12
+      size: 37280021
     - path: data/processed/val.npz
       hash: md5
-      md5: 49303d75b68815d739454e36894801bd
-      size: 6561511
+      md5: 55d89a1c186bf8329d48a56c33c6865c
+      size: 6598162
     - path: src/train.py
       hash: md5
       md5: 5629a2f1106ad09578929db18795160b
@@ -60,11 +60,11 @@ stages:
     outs:
     - path: models/history.csv
       hash: md5
-      md5: c1f5fed3cec783798fce142551b3279a
-      size: 816
+      md5: 7875011ce132588a7ff39bd529b7a28c
+      size: 813
     - path: models/model.h5
       hash: md5
-      md5: eedca9b9f3f2fceeb0a72e9dcf76df0a
+      md5: 12a209dca46fc730496668e5f1773f23
       size: 635480
   evaluate:
     cmd: python src/evaluate.py
@@ -75,7 +75,7 @@ stages:
       size: 7278729
     - path: models/model.h5
       hash: md5
-      md5: eedca9b9f3f2fceeb0a72e9dcf76df0a
+      md5: 12a209dca46fc730496668e5f1773f23
       size: 635480
     - path: src/evaluate.py
       hash: md5
@@ -84,9 +84,9 @@ stages:
     outs:
     - path: confusion_matrix.png
       hash: md5
-      md5: f5fae87199f6e5b9169e618e07fe534f
-      size: 41742
+      md5: 07142c7e1397ab2ddc099ec904624f68
+      size: 41854
     - path: metrics.json
       hash: md5
-      md5: 5917d482f95ea58651db3f7754469f82
+      md5: 26243e7ed3588a230676ec8176e03634
       size: 83
